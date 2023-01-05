@@ -1,11 +1,13 @@
 import './App.css';
-import UsereducerExplore from './usereducer_hook/usereducerExplore';
+import UseeffectExplore from './useeffect_hook/useeffectExplore';
+//import UsereducerExplore from './usereducer_hook/UsereducerExplore';
 //import UsestateExplore from './usestate_hook/usestateExplore';
 
 function App() {
   return (
     // <UsestateExplore/>
-    <UsereducerExplore />
+    //<UsereducerExplore />
+   < UseeffectExplore/>
   );
 }
 
