@@ -1,5 +1,6 @@
 import './App.css';
-import UseLayoutEffectHookExplore from './usereducer_hook/UseLayoutEffectHookEExplore';
+import ImperativeHook from './useImparativeHandleHook/imperativeHook'
+//import UseLayoutEffectHookExplore from './usereducer_hook/UseLayoutEffectHookEExplore';
 //import UserefhookExplore from './useref_hook/UserefhookExplore';
 //import UseeffectExplore from './useeffect_hook/useeffectExplore';
 //import UsereducerExplore from './usereducer_hook/UsereducerExplore';
@@ -11,7 +12,8 @@ function App() {
     //<UsereducerExplore />
    //< UseeffectExplore/>
     //<UserefhookExplore />
-    <UseLayoutEffectHookExplore/>
+    //<UseLayoutEffectHookExplore/>
+    <ImperativeHook />
   );
 }
 
