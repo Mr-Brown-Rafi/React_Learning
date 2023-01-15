@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "./context_hook";
 
 const Login = (props) => {
+  const { setName } = useContext(AppContext);
   return (
     <>
-      <input onChange={(event) => props.setName(event.target.value)}></input>
+      <input onChange={(event) => setName(event.target.value)}></input>
     </>
   );
 };
