@@ -14,7 +14,7 @@ const UseLayoutEffectHookExplore = () => {
   return (
     <>
       <div>
-        <input ref={inputRef} value="Rafi." readOnly></input>
+        <input ref={inputRef} value="Rajak" readOnly></input>
       </div>
     </>
   );
