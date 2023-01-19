@@ -1,5 +1,7 @@
 import './App.css';
-import ContextHook from './context_hook/context_hook';
+
+import UseMemoHook from './useMemo_hook/UseMemoHook';
+//import ContextHook from './context_hook/context_hook';
 //import ImperativeHook from './useImparativeHandleHook/imperativeHook'
 //import UseLayoutEffectHookExplore from './usereducer_hook/UseLayoutEffectHookEExplore';
 //import UserefhookExplore from './useref_hook/UserefhookExplore';
@@ -15,7 +17,8 @@ function App() {
     //<UserefhookExplore />
     //<UseLayoutEffectHookExplore/>
     //<ImperativeHook />
-    <ContextHook/>
+    //<ContextHook/>
+   < UseMemoHook/>
   );
 }
 
