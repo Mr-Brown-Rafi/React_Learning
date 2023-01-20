@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 
-
 const UseMemoHook = () => {
+  const [count, setCount] = useState(0);
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -24,14 +24,38 @@ const UseMemoHook = () => {
       if (currentName.length > longestName.length) longestName = currentName;
     }
 
-    console.log("computed");
+    setCount((prevState) => prevState + 1);
     return longestName;
   };
-  
 
-  return(<>
-   <div>{findLongestName(data)}</div>
-  </>);
+  const getLongestName = useMemo(() => findLongestName(data), [data]);
+
+  return (
+    <>
+      <div>
+        {getLongestName}
+        <br></br>
+
+        <button
+          onClick={() => {
+            // findLongestName(data);
+            getLongestName()
+            
+          }}
+        >
+          get longest Name.
+        </button>
+        <br></br>
+
+        <p>{count } Many Times Consumed. </p>
+
+        <p> Function <code>findLongestName</code> will execute every time we click on Toggle button.</p>
+       <p>To avoid redundent executions and increase the perfomance we can use useMemo Hook.</p>
+       <p>Implimentation of useMemo Hook: <code>const getLongestName = useMemo(() => findLongestName(data), [data]);</code></p>
+       <p>Reffer getLongestName this const to execute the <code>findLongestName</code> function</p>
+      </div>
+    </>
+  );
 };
 
 export default UseMemoHook;
