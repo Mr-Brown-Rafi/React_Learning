@@ -2,15 +2,14 @@ import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 
 const UseMemoHook = () => {
-  const [count, setCount] = useState(0);
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/comments")
       .then((response) => {
         setData(response.data);
-        console.log("Api called.");
       });
   }, []);
 
@@ -20,41 +19,32 @@ const UseMemoHook = () => {
     let longestName = "";
     for (let i = 0; i < comments.length; i++) {
       let currentName = comments[i].name;
-
-      if (currentName.length > longestName.length) longestName = currentName;
+      if (currentName.length > longestName.length) {
+        longestName = currentName;
+      }
     }
 
-    setCount((prevState) => prevState + 1);
+    console.log("THIS WAS COMPUTED");
+
     return longestName;
   };
 
   const getLongestName = useMemo(() => findLongestName(data), [data]);
 
   return (
-    <>
-      <div>
-        {getLongestName}
-        <br></br>
+    <div className="App">
+      <div> {getLongestName} </div>
 
-        <button
-          onClick={() => {
-            // findLongestName(data);
-            getLongestName()
-            
-          }}
-        >
-          get longest Name.
-        </button>
-        <br></br>
-
-        <p>{count } Many Times Consumed. </p>
-
-        <p> Function <code>findLongestName</code> will execute every time we click on Toggle button.</p>
-       <p>To avoid redundent executions and increase the perfomance we can use useMemo Hook.</p>
-       <p>Implimentation of useMemo Hook: <code>const getLongestName = useMemo(() => findLongestName(data), [data]);</code></p>
-       <p>Reffer getLongestName this const to execute the <code>findLongestName</code> function</p>
-      </div>
-    </>
+      <button
+        onClick={() => {
+          setToggle(!toggle);
+        }}
+      >
+        {" "}
+        Toggle
+      </button>
+      {toggle && <h1> toggle </h1>}
+    </div>
   );
 };
 
