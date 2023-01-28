@@ -1,6 +1,9 @@
 import './App.css';
-import UseCallBackHook from './UseCallBack_hook/UseCallBackHook';
+import HookCounter from './HooksDeep/UseStateHook.js/HookCounter';
+//import ClassCounter from './HooksDeep/UseStateHook.js/ClassCounter';
 
+
+//import UseCallBackHook from './UseCallBack_hook/UseCallBackHook';
 //import UseMemoHook from './useMemo_hook/UseMemoHook';
 //import ContextHook from './context_hook/context_hook';
 //import ImperativeHook from './useImparativeHandleHook/imperativeHook'
@@ -20,7 +23,11 @@ function App() {
     //<ImperativeHook />
     //<ContextHook/>
    //< UseMemoHook/>
-   <UseCallBackHook />
+   //<UseCallBackHook />
+
+
+   //<ClassCounter/>
+   <HookCounter/>
   );
 }
 
