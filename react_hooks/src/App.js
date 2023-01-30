@@ -1,5 +1,6 @@
 import './App.css';
-import HookCounterTwo from './HooksDeep/UseStateHook.js/HookCounterTwo';
+import HookCounterThree from './HooksDeep/UseStateHook.js/HookCounterThree';
+//import HookCounterTwo from './HooksDeep/UseStateHook.js/HookCounterTwo';
 //import HookCounter from './HooksDeep/UseStateHook.js/HookCounter';
 //import ClassCounter from './HooksDeep/UseStateHook.js/ClassCounter';
 
@@ -29,7 +30,8 @@ function App() {
 
    //<ClassCounter/>
    //<HookCounter/>
-   <HookCounterTwo/>
+   //<HookCounterTwo/>
+  < HookCounterThree/>
   );
 }
 
