@@ -5,7 +5,7 @@ function Product() {
   return (
     <>
     <div>This is Products page.</div>
-    <Link to={'/'}>HOme Page.</Link>
+    <Link to={'/'}>Home Page.</Link>
     </>
   )
 }
