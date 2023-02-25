@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const products = [
+  { id : 'p1', title: "Product 1"},
+  { id : 'p2', title: "Product 2"},
+  { id : 'p3', title: "Product 3"},
+  { id : 'p4', title: "Product 4"},
+]
+
+
 function Product() {
   return (
     <>
@@ -8,13 +16,7 @@ function Product() {
       <Link to={"/"}>Home Page.</Link>
 
       <ul>
-        <li>
-          <Link to="/products/1">Product 1</Link>
-        </li>
-        <li>Product 2</li>
-        <li>Product 3</li>
-        <li>Product 4</li>
-        <li>Product 5</li>
+        {products.map( product => <li><Link id={product.id} to={product.id} >{product.title}</Link></li>)}
       </ul>
     </>
   );
