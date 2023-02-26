@@ -8,10 +8,10 @@ function Navigation() {
       <nav>
         <ul className={styles.list}>
           <li>
-            <NavLink to="/" className={({isActive})=> isActive? styles.active : undefined} end >Home</NavLink>
+            <NavLink to="" className={({isActive})=> isActive? styles.active : undefined} end >Home</NavLink>
           </li>
           <li>
-            <NavLink to="/products" className={({isActive})=> isActive? styles.active : undefined} end >Products</NavLink>
+            <NavLink to="products" className={({isActive})=> isActive? styles.active : undefined} end >Products</NavLink>
           </li>
         </ul>
       </nav>

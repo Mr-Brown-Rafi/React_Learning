@@ -13,7 +13,7 @@ function Product() {
   return (
     <>
       <div>This is Products page.</div>
-      <Link to={"/"}>Home Page.</Link>
+      <Link to=".." >Home Page.</Link> //// There are lot of ways to return to Home page need to analyse this
 
       <ul>
         {products.map( product => <li><Link id={product.id} to={product.id} >{product.title}</Link></li>)}
