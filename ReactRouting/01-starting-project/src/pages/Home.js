@@ -5,13 +5,13 @@ function Home() {
   const navigate = useNavigate();
 
   function navigateHandiler() {
-    navigate("products");
+    navigate("/products");
   }
 
   return (
     <>
       <div>Welcome to Home page.</div>
-      <Link to="products">Products Page.</Link>
+      <Link to="/products">Products Page.</Link>
       <p><button onClick={navigateHandiler}>products</button></p>
     </>
   );
