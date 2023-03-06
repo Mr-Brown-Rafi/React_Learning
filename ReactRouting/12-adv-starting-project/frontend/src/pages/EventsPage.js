@@ -16,7 +16,7 @@ const EventsPage = () => {
       <ul>
         {events.map((event) => (
           <li>
-            <Link id={event.id} to={event.title}>
+            <Link id={event.id} to={`/events/${event.title}`}>
               {event.title}
             </Link>
           </li>
